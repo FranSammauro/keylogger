@@ -2,10 +2,12 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+#Comprovamos que la conexion a sido exitosa
 @app.route('/')
 def index():
     return 'Hello, World!'
 
+# Nos conctamos a la ruta y puesto ya definidos con Flask
 @app.route('/log', methods=['POST'])
 def receive_data():
     if request.method == 'POST':
@@ -16,5 +18,6 @@ def receive_data():
     else:
         return 'Invalid request method'
 
+# Nos conectamos al puesto definido por nosotros
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

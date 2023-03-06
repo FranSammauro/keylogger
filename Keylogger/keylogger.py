@@ -25,14 +25,12 @@ def convertir_string(keys):
 # Vamos a enviar los datos
 def enviar_datos(datos):
     try:
-
         response = requests.post(server_url, data=datos)
         if response.status_code == 200:
             print("Datos enviados correctamente")
         else:
             print(
-                f"Error al enviar datos al servidor. Código de respuesta: {response.status_code}"
-            )
+                f"Error al enviar datos al servidor{response.status_code}")
     except requests.exceptions.RequestException as e:
         print(f"No se pudo conectar con el servidor: {e}")
 

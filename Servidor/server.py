@@ -14,9 +14,9 @@ def receive_data():
         data = request.get_data()
         with open('log.txt', 'w') as f:
             f.write(data.decode('utf-8'))
-        return 'Data received successfully!'
+        return 'datos enviados'
     else:
-        return 'Invalid request method'
+        return 'Error'
 
 # Nos conectamos al puesto definido por nosotros
 if __name__ == '__main__':

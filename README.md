@@ -27,16 +27,3 @@ deactivate
 ```
 
 -----------------------------------
-###  Instalacion de librerias 
-
-> Creacion del archivo para las librerias
-
-```
-requirements.txt
-```
-
-> Instalacion de las Librerias
-
-```python
-pip install -r ".\requirements.txt"
-```
